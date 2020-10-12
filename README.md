@@ -3,6 +3,7 @@
 This's a bot script to check if CHECK-IN or POOL exist and it will notify if exist using sound !
 
 ## Features:
+----
 
 -  Login With Your Credentials
 - Check If Check-In Or Pool Exist
@@ -12,6 +13,7 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
 -  ~~Notify Using Mail with SMTP <sup>SOON</sup>~~ 
 
 ### Installation & Running:
+----
 
 Note: Before all that you must have python3 on your OS
 
