@@ -2,26 +2,13 @@
 from selenium import webdriver
 import pyttsx3
 import time
+import json
 import re
 
 
 engine = pyttsx3.init()
 
-config = {
-    'URL':"https://candidature.1337.ma/",
-    'URL_TEST':'http://localhost:5000/',
-    'emailName':'user[email]',
-    'passName':'user[password]',
-    'email':'YOUR 1337 EMAIL',
-    'password':'YOUR PASSWORD',
-    'testing':False,
-    'testing_type':'2', #default both
-    # 'testing_availables':{
-    #     '0':'check_in',
-    #     '1':'pool',
-    #     '2':'both'
-    # }
-}
+config = json.load(open('config.json'))
 
 keyword_used = [
     'Date de la rentrée',
