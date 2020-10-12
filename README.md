@@ -26,10 +26,10 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
 
 2. Download WebDriver For Google Chrome:
 
-      **NOTE : In Case You  Use Google Chrome 86.0.4240.75 That's Work For You Don't Need Download Anything.**
-      Go to this [link](https://chromedriver.chromium.org/downloads) and download ChromeDriver as per your Google Chrome version ! After that unzip it in the Bot folder.
+      * **NOTE : In Case You  Use Google Chrome 86.0.4240.75 That's Work For You Don't Need Download Anything.**
+      * Go to this [link](https://chromedriver.chromium.org/downloads) and download ChromeDriver as per your Google Chrome version ! After that unzip it in the Bot folder.
 3. Set Credentials:
-      Use any IDE and open ```config.json``` and change email and password to your credentials<br/>
+      * Use any IDE and open ```config.json``` and change email and password to your credentials<br/>
       ```
       {
     "email":"YOUR 1337 EMAIL",
@@ -37,7 +37,7 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
       }
       ```
 4. Run The Bot:
-      ```python3 bot.py```
+     * ```python3 bot.py```
 ### Tech
 
 1337 Bot built with this   libraries and frameworks :
