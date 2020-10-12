@@ -1,9 +1,11 @@
 
 from selenium import webdriver
+from os import path
 import pyttsx3
 import time
 import json
 import re
+
 
 
 engine = pyttsx3.init()
@@ -44,7 +46,7 @@ def login():
     elif '/users/sign_in' not in chrome.current_url:
         return True
     else:
-        chorme.get(URL+'users/sign_in')
+        chorme.get(path.join(URL,'users/sign_in'))
     chrome.implicitly_wait(1)
     email = chrome.find_element_by_name(config['emailName'])
     password = chrome.find_element_by_name(config['passName'])
@@ -60,7 +62,7 @@ def check_pool():
     if 'piscines' in chrome.current_url:
         pass
     else:
-        chrome.get(URL+"piscines")
+        chrome.get(path.join(URL,"piscines"))
     chrome.implicitly_wait(1)
     is_found = list(filter(lambda x: re.search(x,chrome.page_source),keyword_used))
     if len(is_found) > 0:
