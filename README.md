@@ -15,7 +15,9 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
 ### Installation & Running:
 ----
 
-<span style="color:red;">Note: Before all that you must have python3 on your OS</span>
+```diff
+- Note: Before all that you must have python3 on your OS
+```
 
 > In Case You Want To Install And Run This Bot You Should Follow This Steps Below . :point_down: 
 
