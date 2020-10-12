@@ -44,6 +44,11 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
 
 * [Selenium](https://www.selenium.dev/) - Selenium is a portable framework for testing web applications.
 * [Pyttsx3](https://pypi.org/project/pyttsx3/) - text-to-speech conversion library in Python.
+### Follow Us !
+ * [Facebook](https://www.facebook.com/abdlehadi.sabani)
+ * [Twitter](https://twitter.com/AbdelhadiSabani)
+ * [LinkedIn](https://www.linkedin.com/in/abdelhadi-sabani-1bb5171a7/)
+ * [GitHub](https://github.com/awbx)
 ### License
 ----
 
