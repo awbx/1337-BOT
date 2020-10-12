@@ -1,6 +1,7 @@
 # 1337 ~~Bot~~ [Check-In || Pool]
 
-This a bot script to check if  CHECK-IN  or POOL exist and it will notify if exist using sound !
+
+This's  a bot script to check if  CHECK-IN  or POOL exist and it will notify if exist using sound !
 
 ### Features:
   - [x] Login With Your Credentials
