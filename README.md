@@ -18,7 +18,7 @@ Note: Before all that you must have python3 on your OS
 > In Case You Want To Install And Run This Bot You Should Follow This Steps Below . :point_down: 
 
 1. Get The Requirements:
-    * ```pip3 install -r requiremts.txt```
+    * ```pip3 install -r requirements.txt```
 
 2. Download WebDriver For Google Chrome:
 
@@ -34,3 +34,10 @@ Note: Before all that you must have python3 on your OS
       ```
 4. Run The Bot:
       ```python3 bot.py```
+### License
+----
+
+MIT
+
+
+**Free Software, Hell Yeah!**
