@@ -38,6 +38,12 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
       ```
 4. Run The Bot:
       ```python3 bot.py```
+### Tech
+
+1337 Bot built with this   libraries and frameworks :
+
+* [Selenium](https://www.selenium.dev/) - Selenium is a portable framework for testing web applications.
+* [Pyttsx3](https://pypi.org/project/pyttsx3/) - text-to-speech conversion library in Python.
 ### License
 ----
 
