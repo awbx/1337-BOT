@@ -41,7 +41,7 @@ This's a bot script to check if CHECK-IN or POOL exist and it will notify if exi
 ### License
 ----
 
-MIT
+MIT &copy; [Awbx](https://github.com/awbx)
 
 
 **Free Software, Hell Yeah!**
