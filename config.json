@@ -1,15 +1,25 @@
 {
-    "URL": "https://candidature.1337.ma/",
-    "URL_TEST":"http://localhost:5000/",
-    "emailName":"user[email]",
-    "passName":"user[password]",
-    "email":"YOUR 1337 EMAIL",
-    "password":"YOUR PASSWORD",
-    "testing":false,
-    "testing_type":"2", 
-    "testing_availables": {
-    "0":"check_in",
-        "1":"pool",
-        "2":"both"
-    }
+  "URL": "https://candidature.1337.ma/",
+  "EMAIL": "YOUR 1337 EMAIL",
+  "PASSWORD": "YOUR 1337 PASSWORD",
+  "ASSAY_TYPES_AVAILABLE": {
+    "CHECK_IN": 0,
+    "POOL": 1,
+    "BOTH": 2
+  },
+  "ASSAY_TYPE": "BOTH",
+  "REPEAT_AFTER_N_SEC": 6,
+  "KEYWORD_USED": [
+    "Date de la rentrée",
+    "Nombre de places",
+    "places libres",
+    "S'inscrire",
+    "Plus de place",
+    "Accompagnement",
+    "Ben Guerir",
+    "Khouribga",
+    "Je viens avec quelqu'un",
+    "25000",
+    "43150"
+  ]
 }
