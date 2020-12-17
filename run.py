@@ -1,4 +1,5 @@
 from selenium.webdriver import Chrome
+from utils.mail import Mailer
 from os import path
 import pyttsx3
 import json
@@ -13,6 +14,7 @@ KEYWORD_USED = config.get('KEYWORD_USED', None)
 ASSAY_TYEPS_AVAILABLE = config.get("ASSAY_TYPES_AVAILABLE", None)
 ASSAY_TYPE = config.get("ASSAY_TYPE", "BOTH")
 REPEAT_AFTRE_N_SEC = config.get("REPEAT_AFTRE_N_SEC", 6)
+MAIL_BODY = "Please go go go to check 1337, there's something new !!"
 
 
 class Bot(Chrome):
@@ -25,14 +27,7 @@ class Bot(Chrome):
         self.get(URL)
         self.implicitly_wait(1)
         self.engine = pyttsx3.init()
-
-    def notify(self):
-        try:
-            for _ in range(200):
-                self.engine.say("Warning Something There")
-                self.engine.runAndWait()
-        except:
-            self.engine.stop()
+        self.mail = Mailer()
 
     def login(self):
         """ This Function Will Login To 1337 With Your Credentials """
@@ -54,6 +49,7 @@ class Bot(Chrome):
             return True
 
     def check_pool(self):
+        """ This Function Will Check If The Pool Exist """
         if 'piscines' in self.current_url:
             pass
         else:
@@ -61,9 +57,11 @@ class Bot(Chrome):
         self.implicitly_wait(1)
         is_found = self.exist_in_page_source()
         if len(is_found) > 0:
-            self.notify()
+            return True
+        return False
 
     def check_check_in(self):
+        """ This Function Will Check If The Check-In Exist """
         if 'meetings' in self.current_url:
             pass
         else:
@@ -71,23 +69,46 @@ class Bot(Chrome):
         self.implicitly_wait(1)
         is_found = self.exist_in_page_source()
         if len(is_found) > 0:
-            self.notify()
+            return True
+        return False
 
     def assay_type(self):
+        """ This Function Will Setup The Assay Type """
         if ASSAY_TYEPS_AVAILABLE.get(ASSAY_TYPE, None) == 0:
-            self.check_check_in()
+            if self.check_check_in():
+                self.notify_by_mail()
+                self.notify_by_sound()
         elif ASSAY_TYEPS_AVAILABLE.get(ASSAY_TYPE, None) == 1:
-            self.check_pool()
+            if self.check_pool():
+                self.notify_by_mail()
+                self.notify_by_sound
         elif ASSAY_TYEPS_AVAILABLE.get(ASSAY_TYPE, None) == 2:
-            self.check_check_in()
-            self.check_pool()
+            if self.check_check_in() or self.check_pool():
+                self.notify_by_mail()
+                self.notify_by_sound()
         else:
             raise KeyError("Assay Type Not Found")
 
+    def notify_by_sound(self):
+        """ This Function Will Notify By Sound If There's Something New In 1337 Site """
+        try:
+            for _ in range(200):
+                self.engine.say("Warning Something There")
+                self.engine.runAndWait()
+        except:
+            self.engine.stop()
+            exit(0)
+
+    def notify_by_mail(self):
+        """ This Function Will Notify By Mail If There's Something New In 1337 Site """
+        self.mail.send_mail(MAIL_BODY)
+
     def exist_in_page_source(self):
+        """ This Function Will Check If Keywords In Page Source """
         return list(filter(lambda x: re.search(x, self.page_source), KEYWORD_USED))
 
     def repeat_after_n_sec(self, sec=REPEAT_AFTRE_N_SEC):
+        """ This Function Will Repeat The Assay Type after N Second """
         time.sleep(sec)
 
 
