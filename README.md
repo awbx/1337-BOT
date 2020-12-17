@@ -1,6 +1,6 @@
 # 1337 Bot
 
-This's a bot script to check if CHECK-IN or POOL exist and it will notify if exist using sound !
+This's a bot script to check if CHECK-IN or POOL exist and it will notify if exist using sound , mail or call !
 
 ## Features:
 
